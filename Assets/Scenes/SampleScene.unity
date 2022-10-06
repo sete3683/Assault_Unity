@@ -624,6 +624,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &2003004916 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5833578001895192538, guid: 5c9449e6123912a4f87f7f2667f2447b, type: 3}
+  m_PrefabInstance: {fileID: 5268028788965203323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4433943423419162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5265848022100106849, guid: 5c9449e6123912a4f87f7f2667f2447b, type: 3}
@@ -636,6 +641,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520734980}
     m_Modifications:
+    - target: {fileID: 4241491856831158779, guid: 5c9449e6123912a4f87f7f2667f2447b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5265848022100106849, guid: 5c9449e6123912a4f87f7f2667f2447b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -684,5 +693,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5833578001895192538, guid: 5c9449e6123912a4f87f7f2667f2447b, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080716133343421087, guid: 5c9449e6123912a4f87f7f2667f2447b, type: 3}
+      propertyPath: shootingParticle
+      value: 
+      objectReference: {fileID: 2003004916}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c9449e6123912a4f87f7f2667f2447b, type: 3}

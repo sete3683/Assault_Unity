@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float nextXPos = Mathf.Clamp(transform.localPosition.x + movementInput.x, -xMovementRange, xMovementRange);
-        float nextYPos = Mathf.Clamp(transform.localPosition.y + movementInput.y, -yMovementRange, yMovementRange);
+        float nextXPos = Mathf.Clamp(transform.localPosition.x + movementInput.x * Time.deltaTime, -xMovementRange, xMovementRange);
+        float nextYPos = Mathf.Clamp(transform.localPosition.y + movementInput.y * Time.deltaTime, -yMovementRange, yMovementRange);
 
         transform.localPosition = new Vector3(nextXPos, nextYPos, transform.localPosition.z);
 
@@ -37,6 +37,6 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
-        movementInput = value.Get<Vector2>() * movementSpeed * Time.deltaTime;
+        movementInput = value.Get<Vector2>() * movementSpeed;
     }
 }
