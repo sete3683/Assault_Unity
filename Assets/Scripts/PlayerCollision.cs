@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem CrashParticle;
+    [SerializeField] private GameObject CrashParticle;
     private bool isCrashed = false;
 
     void OnTriggerEnter(Collider other)
@@ -23,7 +23,7 @@ public class PlayerCollision : MonoBehaviour
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<PlayerShooting>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = false;
-        CrashParticle.Play();
+        CrashParticle.SetActive(true);
 
         yield return new WaitForSeconds(3);
 
